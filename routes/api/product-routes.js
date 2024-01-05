@@ -27,7 +27,9 @@ router.get("/:id", async (req, res) => {
     });
 
     if (!productData) {
-      res.status(404).json({ message: "Product not found. Invalid id." });
+      res.status(404).json({
+        message: "GET request cancelled. Product not found: Invalid id.",
+      });
       return;
     }
 
@@ -108,8 +110,7 @@ router.put("/:id", (req, res) => {
       return res.json(product);
     })
     .catch((err) => {
-      // console.log(err);
-      res.status(400).json(err);
+      res.status(500).json(err);
     });
 });
 
