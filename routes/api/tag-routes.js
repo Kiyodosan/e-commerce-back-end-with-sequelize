@@ -25,9 +25,7 @@ router.get("/:id", async (req, res) => {
     });
 
     if (!tagData) {
-      res
-        .status(404)
-        .json({ message: "GET request cancelled. Tag not found: Invalid id." });
+      res.status(404).json({ message: "GET request cancelled. Tag not found: Invalid id." });
       return;
     }
 
@@ -59,9 +57,7 @@ router.put("/:id", async (req, res) => {
     });
 
     if (!tagData) {
-      res
-        .status(404)
-        .json({ message: "PUT request cancelled. Tag not found: Invalid id." });
+      res.status(404).json({ message: "PUT request cancelled. Tag not found: Invalid id." });
       return;
     }
 
@@ -81,11 +77,7 @@ router.delete("/:id", async (req, res) => {
     });
 
     if (!tagData) {
-      res
-        .status(404)
-        .json({
-          message: "DELETE request cancelled. Tag not found: Invalid id.",
-        });
+      res.status(404).json({ message: "DELETE request cancelled. Tag not found: Invalid id." });
       return;
     }
   } catch (err) {

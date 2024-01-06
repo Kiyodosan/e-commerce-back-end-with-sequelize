@@ -25,9 +25,7 @@ router.get("/:id", async (req, res) => {
     });
 
     if (!categoryData) {
-      res.status(404).json({
-        message: "GET request cancelled. Category not found: Invalid id.",
-      });
+      res.status(404).json({ message: "GET request cancelled. Category not found: Invalid id." });
       return;
     }
 
@@ -60,9 +58,7 @@ router.put("/:id", async (req, res) => {
     });
 
     if (!categoryData[0]) {
-      res.status(404).json({
-        message: "PUT request cancelled. Category not found: Invalid id.",
-      });
+      res.status(404).json({ message: "PUT request cancelled. Category not found: Invalid id." });
       return;
     }
 
@@ -82,9 +78,7 @@ router.delete("/:id", async (req, res) => {
     });
 
     if (!categoryData) {
-      res.status(404).json({
-        message: "DELETE request cancelled. Category not found: Invalid id.",
-      });
+      res.status(404).json({ message: "DELETE request cancelled. Category not found: Invalid id." });
       return;
     }
 
