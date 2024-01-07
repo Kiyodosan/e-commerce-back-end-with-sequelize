@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
     const categoryData = await Category.findAll({
       include: [{ model: Product }],
     });
-    res.json(categoryData);
+    res.status(200).json(categoryData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -39,7 +39,6 @@ router.post("/", async (req, res) => {
   // create a new category
   try {
     const categoryData = await Category.create({
-      //// check if this automatically creates an id
       category_name: req.body.category_name,
     });
     res.json(categoryData);

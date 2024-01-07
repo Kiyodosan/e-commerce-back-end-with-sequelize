@@ -10,7 +10,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-//// Check if force should be true or false
+// force: true to clear all data from tables when using "npm start"
+// force: false to keep tables if intended to seed data before using "npm start"
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
 });

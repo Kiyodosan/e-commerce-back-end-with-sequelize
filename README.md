@@ -1,3 +1,4 @@
+
 # e-commerce-back-end-with-sequelize
 
 ---
@@ -17,12 +18,12 @@ This project is a back end demo for an e-commerce website that utilizes CRUD ope
 ## How to run this project
 
 Click on the following image to view the demo video:
-<!-- Change title / image / video info -->
-[![MySQL DB Employee Tracker - demo](<assets/images/MySQL DB Employee Tracker - demo.png>)](https://drive.google.com/file/d/1_KThXrsfNdhVv8Z1D5NXUuXRIdfuJCvh/view)
+
+[![e-commerce back end with sequelize - demo](<assets/images/e-commerce back end with sequelize - demo.png>)](https://drive.google.com/file/d/15xQnOb4QZYgEqDlCxLweGtm7qwEeb_js/view?usp=drive_link)
 
 Make sure Node.js is installed on your device. You can open the command terminal and enter "node -v" to check if node is installed. If the command terminal responds back with a version of Node, then it is installed. Otherwise, go to https://nodejs.org/en/download/ and download the LTS version of Node for the appropriate OS that you are using (Windows, Mac, Linux, etc.).
 
-Open the command terminal (if you haven't already done so). Enter "node server.js" to initiate the program.
+Open the command terminal (if you haven't already done so). Enter "npm run seed" to refresh the tables in the database with their default data. Then enter "npm start" to initiate the program.
 
 ## How to use this project
 
@@ -58,7 +59,7 @@ Post an instance for a table using any of the following routes:
 - localhost:3001/api/product
 - localhost:3001/api/tag
 
-The POST request body should look something like this:
+The POST request body for the products table should look something like this:
 
 {
   product_name: "Basketball",
@@ -77,7 +78,7 @@ Modify (put) an instance in a table using any of the following routes:
 
 Replace :id with the ID for the instance that you are modifying.
 
-The PUT request body should look something like this:
+The PUT request body for the products table should look something like this:
 
 {
   product_name: "Basketball",
