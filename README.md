@@ -1,5 +1,5 @@
 
-# e-commerce-back-end-with-sequelize
+# Ecommerce Back-End with Sequelize
 
 ---
 
